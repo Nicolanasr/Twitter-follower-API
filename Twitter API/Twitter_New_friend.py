@@ -62,11 +62,11 @@ while True:
         if check is not True :
             for user in followersnowtmp :
                 if user not in followerscheck :
-                    print("New Friend: ", user)
+                    print("New Follower: ", user)
             followerscheck = followersnow
         else:
             if check is True and followersnowtmp != followerscheck[:20]:
-                print("Friend lost!")
+                print("Follower lost!")
                 followerscheck = followersnow
             else:
                 print("everything is still the same")
