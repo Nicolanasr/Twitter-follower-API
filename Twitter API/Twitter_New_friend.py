@@ -44,7 +44,6 @@ while True:
 
     headers = dict(connection.getheaders())
     print('Remaining', headers['x-rate-limit-remaining'])
-    
     unfollowed=list()
 
     if count == 0 :
