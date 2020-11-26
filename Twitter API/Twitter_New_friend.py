@@ -75,4 +75,3 @@ while True:
                 print("Follower lost!", unfollowed)
             else:
                 print("everything is still the same")
-        
