@@ -45,6 +45,8 @@ while True:
     headers = dict(connection.getheaders())
     print('Remaining', headers['x-rate-limit-remaining'])
     
+    unfollowed=list()
+
     if count == 0 :
         followersnow = list()
         followerscheck = list()
@@ -66,8 +68,11 @@ while True:
             followerscheck = followersnow
         else:
             if check is True and followersnowtmp != followerscheck[:20]:
-                print("Follower lost!")
+                for user in followersnowtmp:
+                    if user not in followersnow:
+                        unfollowed.append(user)
                 followerscheck = followersnow
+                print("Follower lost!", unfollowed)
             else:
                 print("everything is still the same")
         
