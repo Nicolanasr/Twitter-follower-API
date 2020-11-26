@@ -69,5 +69,5 @@ while True:
                 print("Follower lost!")
                 followerscheck = followersnow
             else:
-                print("Everything is still the same")
+                print("Everything is still the same") 
         
